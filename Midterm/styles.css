@@ -20,7 +20,7 @@ html {
   box-sizing: inherit;
 }
 
-/* ===== Base Styles ===== */
+
 body {
   margin: 0;
   font-family: var(--body-font);
