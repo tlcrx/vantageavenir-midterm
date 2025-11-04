@@ -23,6 +23,7 @@ html {
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
+
 *, *::before, *::after {
   box-sizing: inherit;
 }
@@ -88,13 +89,14 @@ body {
   font-weight: 600;
   padding: 0.45rem 0.8rem;
   border-radius: 6px;
-  transition: background 0.25s ease, color 0.25s ease;
+  transition: background 0.25s ease, color 0.25s ease, transform 0.25s ease;
 }
 
 .nav a:hover,
 .nav a.active {
   background: rgba(11, 59, 47, 0.1);
   color: var(--accent);
+  transform: scale(1.05);
 }
 
 /* ===== Hero Section ===== */
@@ -145,11 +147,18 @@ body {
   text-decoration: none;
   font-weight: 700;
   margin-right: 0.5rem;
-  transition: background 0.25s ease;
+  cursor: pointer;
+  transition: background 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .btn:hover {
   background: #084435;
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.btn:active {
+  transform: scale(0.97);
 }
 
 .btn.secondary {
@@ -178,6 +187,12 @@ body {
   box-shadow: 0 6px 18px rgba(11, 59, 47, 0.05);
   flex: 1 1 220px;
   min-width: 200px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(11, 59, 47, 0.08);
 }
 
 .card h3 {
@@ -237,6 +252,7 @@ form.contact-form {
   border-radius: 10px;
   max-width: 720px;
   box-shadow: 0 6px 18px rgba(11, 59, 47, 0.05);
+  margin: 0 auto;
 }
 
 label {
@@ -269,11 +285,12 @@ input[type="submit"] {
   border-radius: 8px;
   font-weight: 700;
   cursor: pointer;
-  transition: background 0.25s ease;
+  transition: background 0.25s ease, transform 0.25s ease;
 }
 
 input[type="submit"]:hover {
   background: #e85a52;
+  transform: scale(1.03);
 }
 
 /* ===== Footer ===== */
@@ -292,3 +309,27 @@ input[type="submit"]:hover {
   gap: 1rem;
   font-size: 0.95rem;
 }
+
+/* ===== Responsive adjustments ===== */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+  }
+
+  .hero .hero-image {
+    max-width: 100%;
+  }
+
+  .site-header .container {
+    flex-direction: column;
+  }
+
+  .nav {
+    justify-content: center;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
