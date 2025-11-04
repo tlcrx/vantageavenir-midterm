@@ -1,91 +1,294 @@
-/* Basic Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
+/* ==========================================================
+   styles.css — Martinique Destination Site (VantageAvenir)
+   Fonts: Montserrat (headings) / Lora (body)
+   Palette: Celadon + warm accents
+   Layout: Responsive Flexbox & Grid system
+   ========================================================== */
+
+/* ===== Root & Fluid Type ===== */
+:root {
+  --celadon: #BAF2D8;
+  --deep: #0B3B2F;
+  --sand: #F7EFE6;
+  --accent: #FF6F61;
+  --muted: rgba(11, 59, 47, 0.08);
+  --max-width: 1100px;
+  --pad: 1.25rem;
+  --heading-font: "Montserrat", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --body-font: "Lora", Georgia, "Times New Roman", serif;
 }
 
+html {
+  font-size: clamp(16px, 1.2vw + 0.5rem, 20px);
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+/* ===== Base Styles ===== */
 body {
-    background-color: #f0f8ff; /* soft Martinique vibe */
-    color: #333;
-    line-height: 1.6;
+  margin: 0;
+  font-family: var(--body-font);
+  color: var(--deep);
+  background: linear-gradient(180deg, #f8fbfa 0%, #eef7f3 100%);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.7;
 }
 
-/* Header */
-header {
-    background-color: #005f73;
-    color: #fff;
-    padding: 20px 0;
-    text-align: center;
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--pad);
 }
 
-header nav a {
-    color: #fff;
-    text-decoration: none;
-    margin: 0 15px;
-    font-weight: bold;
-    transition: color 0.3s, transform 0.3s;
+/* ===== Header & Navigation ===== */
+.site-header {
+  background: var(--celadon);
+  border-bottom: 1px solid var(--muted);
 }
 
-header nav a:hover {
-    color: #ffb703;
-    transform: scale(1.1);
+.site-header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  padding: 1rem var(--pad);
 }
 
-/* Buttons */
-button, .btn {
-    background-color: #008891;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    margin: 10px 0;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
-    border-radius: 6px;
+.brand {
+  display: flex;
+  gap: 0.6rem;
+  align-items: center;
+  text-decoration: none;
+  color: var(--deep);
 }
 
-button:hover, .btn:hover {
-    background-color: #00afb9;
-    transform: scale(1.05);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+.brand h1 {
+  font-family: var(--heading-font);
+  font-size: clamp(1.2rem, 1.6vw, 1.6rem);
+  margin: 0;
+  letter-spacing: 0.4px;
 }
 
-button:active, .btn:active {
-    background-color: #005f73;
-    transform: scale(0.98);
+/* Flexbox Nav Menu */
+.nav {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.8rem;
 }
 
-/* Sections */
-section {
-    padding: 60px 20px;
-    text-align: center;
+.nav a {
+  text-decoration: none;
+  color: var(--deep);
+  font-weight: 600;
+  padding: 0.45rem 0.8rem;
+  border-radius: 6px;
+  transition: background 0.25s ease, color 0.25s ease;
 }
 
-section h2 {
-    margin-bottom: 20px;
-    font-size: 2rem;
-    color: #023047;
+.nav a:hover,
+.nav a.active {
+  background: rgba(11, 59, 47, 0.1);
+  color: var(--accent);
 }
 
-/* Links inside sections */
-section a {
-    color: #008891;
-    text-decoration: none;
-    transition: color 0.3s;
+/* ===== Hero Section ===== */
+.hero {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  padding: 2rem 0;
+  flex-wrap: wrap;
 }
 
-section a:hover {
-    color: #ffb703;
+.hero .hero-text {
+  flex: 1 1 50%;
 }
 
-/* Footer */
-footer {
-    background-color: #023047;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-    margin-top: 40px;
+.hero h2 {
+  font-family: var(--heading-font);
+  font-size: clamp(1.6rem, 2.6vw, 2.6rem);
+  margin: 0 0 0.6rem;
+  color: var(--deep);
 }
 
+.hero p {
+  margin: 0 0 1rem;
+  font-family: var(--body-font);
+  color: #233;
+}
+
+.hero .hero-image {
+  flex: 0 0 420px;
+  max-width: 42%;
+}
+
+.hero img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(11, 59, 47, 0.12);
+}
+
+/* ===== Buttons ===== */
+.btn {
+  display: inline-block;
+  background: var(--deep);
+  color: var(--sand);
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 700;
+  margin-right: 0.5rem;
+  transition: background 0.25s ease;
+}
+
+.btn:hover {
+  background: #084435;
+}
+
+.btn.secondary {
+  background: transparent;
+  color: var(--deep);
+  border: 2px solid var(--deep);
+}
+
+.btn.secondary:hover {
+  background: var(--deep);
+  color: var(--sand);
+}
+
+/* ===== Cards & Highlights ===== */
+.highlights {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(11, 59, 47, 0.05);
+  flex: 1 1 220px;
+  min-width: 200px;
+}
+
+.card h3 {
+  margin: 0 0 0.5rem;
+  font-family: var(--heading-font);
+  color: var(--deep);
+}
+
+.card p {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+/* ===== Main Content ===== */
+section.content {
+  margin: 2rem 0;
+}
+
+.content h2 {
+  font-family: var(--heading-font);
+  color: var(--deep);
+  margin-bottom: 1rem;
+}
+
+/* ===== Grid Layout ===== */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+}
+
+/* ===== Places ===== */
+.place {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(11, 59, 47, 0.05);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.place:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(11, 59, 47, 0.08);
+}
+
+.place img {
+  width: 100%;
+  border-radius: 8px;
+  display: block;
+  margin-bottom: 0.6rem;
+}
+
+/* ===== Contact Form ===== */
+form.contact-form {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  max-width: 720px;
+  box-shadow: 0 6px 18px rgba(11, 59, 47, 0.05);
+}
+
+label {
+  display: block;
+  margin: 0.6rem 0 0.25rem;
+  font-weight: 600;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+  width: 100%;
+  padding: 0.6rem;
+  border-radius: 6px;
+  border: 1px solid rgba(11, 59, 47, 0.12);
+  font-family: var(--body-font);
+}
+
+textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+input[type="submit"] {
+  background: var(--accent);
+  color: white;
+  padding: 0.7rem 1rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.25s ease;
+}
+
+input[type="submit"]:hover {
+  background: #e85a52;
+}
+
+/* ===== Footer ===== */
+.site-footer {
+  background: var(--celadon);
+  border-top: 1px solid var(--muted);
+  margin-top: 3rem;
+  padding: 1rem 0;
+}
+
+.site-footer .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-size: 0.95rem;
+}

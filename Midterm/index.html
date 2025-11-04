@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Places To Eat — Martinique</title>
+  <title>Martinique — VantageAvenir Travel</title>
   <link rel="stylesheet" href="styles.css">
   <style>
     /* Flexbox Layout */
@@ -11,7 +11,6 @@
       display: flex;
       flex-direction: column;
       flex-wrap: nowrap;
-      justify-content: space-between;
       align-items: center;
     }
 
@@ -20,29 +19,33 @@
       flex-flow: row wrap;
       justify-content: center;
       gap: 1rem;
-    }
-
-    .grid {
-      display: flex;
-      flex-flow: row wrap;
-      justify-content: space-evenly;
-      align-items: stretch;
-      gap: 2rem;
       margin-top: 1rem;
     }
 
-    .place {
-      flex: 1 1 250px;
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      flex-wrap: nowrap;
+      margin: 2rem 0;
+    }
+
+    .hero img {
+      max-width: 100%;
+      border-radius: 12px;
+      align-self: center;
+    }
+
+    .intro {
       display: flex;
       flex-direction: column;
       align-items: center;
       text-align: center;
-    }
-
-    .place img {
-      max-width: 100%;
-      border-radius: 10px;
-      align-self: center;
+      gap: 1rem;
+      max-width: 800px;
+      flex-grow: 1;
     }
 
     footer .container {
@@ -57,7 +60,7 @@
 <body>
   <header class="site-header">
     <div class="container">
-      <a class="brand" href="index.html"><h1>Martinique — VantageAvenir Travel</h1></a>
+      <a class="brand" href="index.html"><h1>Welcome to Martinique</h1></a>
       <nav class="nav">
         <a href="index.html">Home</a>
         <a href="activities.html">Things To Do</a>
@@ -69,27 +72,16 @@
   </header>
 
   <main class="container">
-    <section class="content">
-      <h2>Recommended Restaurants</h2>
-      <div class="grid">
-        <article class="place">
-          <img src="images/La Mandoline.webp" alt="La Mandoline">
-          <h3>La Mandoline</h3>
-          <p>A family-run restaurant serving traditional Creole seafood and seasonal produce. Noted for its rum-infused desserts and warm hospitality.</p>
-        </article>
+    <section class="hero">
+      <img src="images/martinique-beach.webp" alt="Scenic beach in Martinique">
+      <h2>Your Gateway to Paradise</h2>
+      <p>Discover the vibrant culture, lush landscapes, and world-class cuisine that make Martinique the jewel of the Caribbean.</p>
+    </section>
 
-        <article class="place">
-          <img src="images/XO Bistro.webp" alt="XO Bistro">
-          <h3>XO Bistro</h3>
-          <p>Modern bistro with ocean views that blends French technique with local ingredients—think grilled snapper with tropical fruit chutney.</p>
-        </article>
-
-        <article class="place">
-          <img src="images/Anba Fèy Tôl La.webp" alt="Anba Fèy Tôl La">
-          <h3>Anba Fèy Tôl La</h3>
-          <p>Affordable, delicious menu with quick, friendly service. Unique decor and a beautiful coastline view.</p>
-        </article>
-      </div>
+    <section class="intro">
+      <h3>Explore Martinique</h3>
+      <p>From colorful coastal towns to mountain trails, Martinique offers an unforgettable mix of relaxation and adventure. Explore our curated guides to find the best dining, activities, and experiences on the island.</p>
+      <a href="activities.html" class="btn primary">Start Exploring</a>
     </section>
   </main>
 

@@ -1,36 +1,95 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - Martinique</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact — Martinique</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Flexbox Layout */
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      flex-wrap: nowrap;
+    }
+
+    .nav {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      width: 100%;
+      max-width: 500px;
+      gap: 1rem;
+      justify-content: center;
+    }
+
+    input, textarea {
+      flex-grow: 1;
+      padding: 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    footer .container {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+  </style>
 </head>
 <body>
-
-<header>
-    <h1>Contact Us</h1>
-    <nav>
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="index.html"><h1>Contact Us</h1></a>
+      <nav class="nav">
         <a href="index.html">Home</a>
-        <a href="activities.html">Activities</a>
-        <a href="dining.html">Dining</a>
-        <a href="contact.html">Contact</a>
-        <a href="statement.html">Statement</a>
-    </nav>
-</header>
+        <a href="activities.html">Things To Do</a>
+        <a href="dining.html">Places To Eat</a>
+        <a href="statement.html">Design Statement</a>
+        <a href="contact.html">Contact Us</a>
+      </nav>
+    </div>
+  </header>
 
-<section>
-    <h2>Get in Touch</h2>
-    <p>Have questions or need assistance planning your trip? Reach out to our team.</p>
-    <button class="btn" onclick="location.href='statement.html'">Next: Statement</button>
-</section>
+  <main class="container">
+    <section class="content">
+      <h2>Contact & Booking</h2>
+      <form class="contact-form" action="#" method="post" aria-label="Contact form">
+        <label for="name">Name</label>
+        <input id="name" name="name" type="text" placeholder="Your full name" required>
 
-<footer>
-    &copy; 2025 Martinique Midterm Project
-</footer>
+        <label for="phone">Phone</label>
+        <input id="phone" name="phone" type="tel" placeholder="+1 (555) 555-5555">
 
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" placeholder="you@example.com" required>
+
+        <label for="message">Comments / Requirements</label>
+        <textarea id="message" name="message" placeholder="Tell us about dietary needs, mobility, or special requests"></textarea>
+
+        <div style="display: flex; justify-content: flex-start; gap: 1rem;">
+          <input type="submit" value="Submit Request" style="align-self: flex-start;">
+          <a class="btn secondary" href="index.html" style="align-self: flex-start;">Request Info</a>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div>VantageAvenir Travel • info@vantageavenir.example</div>
+      <div>© 2025</div>
+    </div>
+  </footer>
 </body>
 </html>
-
-
-
