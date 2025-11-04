@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Things To Do — Martinique</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+   
+    .flex-menu {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+      background-color: #BAF2D8;
+      border-top: 1px solid rgba(11,59,47,0.1);
+      padding: 0.75rem 0;
+    }
+
+    .flex-menu a {
+      text-decoration: none;
+      color: #0b3b2f;
+      font-weight: 600;
+      padding: 0.4rem 0.8rem;
+      border-radius: 6px;
+      transition: background-color 0.3s ease;
+    }
+
+    .flex-menu a:hover {
+      background-color: rgba(11,59,47,0.08);
+    }
+
+    .flex-menu a.active {
+      background-color: rgba(11,59,47,0.15);
+    }
+
+    
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      flex-wrap: nowrap;
+    }
+
+    footer .container {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="index.html"><h1>Martinique — VantageAvenir Travel</h1></a>
+     
+      <nav class="flex-menu" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="activities.html" class="active">Things To Do</a>
+        <a href="dining.html">Places To Eat</a>
+        <a href="statement.html">Design Statement</a>
+        <a href="contact.html">Contact Us</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="content">
+      <h2>Top Activities</h2>
+      <div class="grid">
+        <article class="place">
+          <img src="images/Mount Pelee.jpg" alt="Hiking Mount Pelée">
+          <h3>Hike Mount Pelée</h3>
+          <p>Ascend the dramatic volcano for panoramic views and unique volcanic geology. Guides are available for safety and local context. Best in the dry season for visibility and trail conditions.</p>
+        </article>
+
+        <article class="place">
+          <img src="images/plongée-martinique.avif" alt="Diving reefs">
+          <h3>Snorkel & Dive the Coral Reefs</h3>
+          <p>Martinique has healthy reef systems ideal for snorkeling and SCUBA diving. Expect abundant reef fish, sea turtles, and clear waters—several operators offer guided excursions.</p>
+        </article>
+
+        <article class="place">
+          <img src="images/Fort-de-France Markets.jpg" alt="Local market">
+          <h3>Explore Fort-de-France Markets</h3>
+          <p>Visit local markets for spices, rum, and textile crafts. Engaging with local vendors provides cultural insight and supports small businesses—an ethical tourism practice.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div>Contact: info@vantageavenir.example</div>
+      <div>© 2025 VantageAvenir Travel</div>
+    </div>
+  </footer>
+</body>
+</html>
+
