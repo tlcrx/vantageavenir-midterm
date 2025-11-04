@@ -1,103 +1,33 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Places To Eat — Martinique</title>
-  <link rel="stylesheet" href="styles.css">
-  <style>
-   
-    .container {
-      display: flex;
-      flex-direction: column;
-      flex-wrap: nowrap;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .nav {
-      display: flex;
-      flex-flow: row wrap;
-      justify-content: center;
-      gap: 1rem;
-    }
-
-    .grid {
-      display: flex;
-      flex-flow: row wrap;
-      justify-content: space-evenly;
-      align-items: stretch;
-      gap: 2rem;
-      margin-top: 1rem;
-    }
-
-    .place {
-      flex: 1 1 250px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-    }
-
-    .place img {
-      max-width: 100%;
-      border-radius: 10px;
-      align-self: center;
-    }
-
-    footer .container {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dining - Martinique</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="site-header">
-    <div class="container">
-      <a class="brand" href="index.html"><h1>Martinique — VantageAvenir Travel</h1></a>
-      <nav class="nav">
+
+<header>
+    <h1>Dining in Martinique</h1>
+    <nav>
         <a href="index.html">Home</a>
-        <a href="activities.html">Things To Do</a>
-        <a href="dining.html">Places To Eat</a>
-        <a href="statement.html">Design Statement</a>
-        <a href="contact.html">Contact Us</a>
-      </nav>
-    </div>
-  </header>
+        <a href="activities.html">Activities</a>
+        <a href="dining.html">Dining</a>
+        <a href="contact.html">Contact</a>
+        <a href="statement.html">Statement</a>
+    </nav>
+</header>
 
-  <main class="container">
-    <section class="content">
-      <h2>Recommended Restaurants</h2>
-      <div class="grid">
-        <article class="place">
-          <img src="images/La Mandoline.webp" alt="La Mandoline">
-          <h3>La Mandoline</h3>
-          <p>A family-run restaurant serving traditional Creole seafood and seasonal produce. Noted for its rum-infused desserts and warm hospitality.</p>
-        </article>
+<section>
+    <h2>Local Cuisine</h2>
+    <p>Experience Martinique’s rich flavors, from fresh seafood to traditional Creole dishes.</p>
+    <button class="btn" onclick="location.href='contact.html'">Next: Contact</button>
+</section>
 
-        <article class="place">
-          <img src="images/XO Bistro.webp" alt="XO Bistro">
-          <h3>XO Bistro</h3>
-          <p>Modern bistro with ocean views that blends French technique with local ingredients—think grilled snapper with tropical fruit chutney.</p>
-        </article>
+<footer>
+    &copy; 2025 Martinique Midterm Project
+</footer>
 
-        <article class="place">
-          <img src="images/Anba Fèy Tôl La.webp" alt="Anba Fèy Tôl La">
-          <h3>Anba Fèy Tôl La</h3>
-          <p>Affordable, delicious menu with quick, friendly service. Unique decor and a beautiful coastline view.</p>
-        </article>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container">
-      <div>Email: info@vantageavenir.example</div>
-      <div>© 2025 VantageAvenir Travel</div>
-    </div>
-  </footer>
 </body>
 </html>

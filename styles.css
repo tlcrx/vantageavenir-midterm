@@ -1,0 +1,91 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f0f8ff; /* soft Martinique vibe */
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background-color: #005f73;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    transition: color 0.3s, transform 0.3s;
+}
+
+header nav a:hover {
+    color: #ffb703;
+    transform: scale(1.1);
+}
+
+/* Buttons */
+button, .btn {
+    background-color: #008891;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px 0;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
+    border-radius: 6px;
+}
+
+button:hover, .btn:hover {
+    background-color: #00afb9;
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+button:active, .btn:active {
+    background-color: #005f73;
+    transform: scale(0.98);
+}
+
+/* Sections */
+section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+section h2 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: #023047;
+}
+
+/* Links inside sections */
+section a {
+    color: #008891;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+section a:hover {
+    color: #ffb703;
+}
+
+/* Footer */
+footer {
+    background-color: #023047;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    margin-top: 40px;
+}
+
