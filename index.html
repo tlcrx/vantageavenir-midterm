@@ -1,155 +1,85 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Triston LaCroix's Homepage</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-
-  <style>
-    /* Base Styles */
-    body {
-      font-family: "Roboto", sans-serif;
-      background: linear-gradient(135deg, #1a1a1a, #2e2e2e, #121212);
-      color: #eee;
-      margin: 0;
-      padding: 0;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-    }
-
-    header {
-      text-align: center;
-      padding: 20px;
-      background: rgba(40, 40, 40, 0.6);
-      backdrop-filter: blur(8px);
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-    }
-
-    h1 {
-      font-family: "Montserrat", sans-serif;
-      font-size: 2.5em;
-      color: #f5f5f5;
-      margin: 0;
-    }
-
-    .content {
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 30px;
-      background: rgba(255, 255, 255, 0.05);
-      border-radius: 16px;
-      backdrop-filter: blur(10px);
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
-    }
-
-    img {
-      display: block;
-      max-width: 100%;
-      height: auto;
-      margin: 0 auto 20px;
-      border-radius: 8px;
-    }
-
-    h2 {
-      font-family: "Montserrat", sans-serif;
-      color: #fff;
-      text-align: center;
-    }
-
-    /* Assignment Grid */
-    ul {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      list-style: none;
-      padding: 0;
-      justify-content: center;
-    }
-
-    ul li {
-      flex: 1 1 250px;
-      background: rgba(255, 255, 255, 0.08);
-      backdrop-filter: blur(12px);
-      border-radius: 12px;
-      text-align: center;
-      padding: 20px;
-      transition: all 0.3s ease;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    }
-
-    ul li:hover {
-      transform: scale(1.05);
-      box-shadow: 0 0 25px rgba(0, 255, 200, 0.4);
-      background: rgba(255, 255, 255, 0.12);
-    }
-
-    a {
-      color: #00ffcc;
-      font-weight: 600;
-      text-decoration: none;
-      font-family: "Montserrat", sans-serif;
-      letter-spacing: 0.5px;
-    }
-
-    a:hover {
-      text-shadow: 0 0 8px #00ffcc;
-    }
-
-    /* About Section */
-    p {
-      line-height: 1.6;
-      color: #ddd;
-      text-align: center;
-    }
-  </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Martinique — VantageAvenir Travel</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Lora:wght@400;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
-  <header>
-    <h1>Triston LaCroix</h1>
+ 
+  <header class="site-header">
+    <div class="container flex-between align-center">
+      <a class="brand flex align-center" href="index.html">
+        <svg width="36" height="36" viewBox="0 0 24 24" aria-hidden><rect width="24" height="24" rx="6" style="fill:#0b3b2f"/></svg>
+        <div class="brand-text">
+          <h1>Martinique — VantageAvenir Travel</h1>
+          <p class="tagline">A personalized exploration of my father's homeland</p>
+        </div>
+      </a>
+
+      <nav class="nav flex">
+        <a href="index.html">Home</a>
+        <a href="activities.html">Things To Do</a>
+        <a href="dining.html">Places To Eat</a>
+        <a href="statement.html">Design Statement</a>
+        <a href="contact.html">Contact Us</a>
+      </nav>
+    </div>
   </header>
 
-  <div class="content">
-    <img src="img/Aston-Martin-V12-Vantage-config-2.jpg" alt="Aston Martin Vantage">
+  
+  <main class="container">
+    <section class="hero flex align-center">
+      <div class="hero-text flex-column">
+        <h2>Martinique — Caribbean island of culture, creole cuisine, and verdant peaks</h2>
+        <p>Martinique is an island of volcanic mountains, rainforests, and historic French-Caribbean culture.
+           As the place of my father's family origin, it holds personal significance; I have not yet been,
+           and this site collects research and itineraries toward a first trip. The text below gives practical highlights and curated activities.</p>
 
-    <h2>About Me</h2>
-    <p>
-      <strong>Interests:</strong><br>
-      • Modern UX and product design<br>
-      • Technology-driven creativity<br>
-      • Contemporary visual and interaction trends<br><br>
+        <div class="flex gap-sm">
+          <a class="btn" href="contact.html">Book Now</a>
+          <a class="btn secondary" href="contact.html">Request Info</a>
+        </div>
 
-      <strong>Passions:</strong><br>
-      • Human-centered research and digital experiences<br>
-      • Blending aesthetics with functionality<br>
-      • Exploring how design shapes behavior and emotion<br><br>
+        <div class="highlights flex space-between wrap" aria-hidden="true">
+          <div class="card"><h3>Language</h3><p>French and Martinican Creole; many cultural institutions are bilingual.</p></div>
+          <div class="card"><h3>Climate</h3><p>Tropical; warm year-round with a wet season (June–November).</p></div>
+          <div class="card"><h3>Top Sights</h3><p>Mount Pelée, Les Salines beach, Saint-Pierre historic district.</p></div>
+        </div>
+      </div>
 
-      <strong>Hobbies:</strong><br>
-      • Playing and analyzing video games<br>
-      • Listening to music and discovering new sounds<br>
-      • Following automotive design—especially cars like the Aston Martin Vantage<br>
-      • Staying inspired by modern art, layouts, and interface patterns
-    </p>
+      <div class="hero-image">
+        <img src="images/Martinique coastline and beach.jpg" alt="Martinique coastline and beach" />
+      </div>
+    </section>
 
-    <h2>Assignments</h2>
-    <ul>
-      <li><a href="../asg1/index.html">Assignment 1</a></li>
-      <li><a href="../asg2/hero.html">Assignment 2</a></li>
-      <li><a href="../asg3/favoriteband.html">Assignment 3</a></li>
-      <li><a href="../asg4/leastfavoriteartist.html">Assignment 4</a></li>
-      <li><a href="../asg5/dinner-invitation.html">Assignment 5</a></li>
-      <li><a href="../asg6/six-thinking-hats.index.html">Assignment 6</a></li>
-      <li><a href="./asg7/webpage.html">Assignment 7: Starkiller Campaign</a></li>
-      <li><a href="asg7/wireframes.html">Assignment 7: Wireframes & Reflection</a></li>
-      <li><a href="asg8/domains.html">Assignment 8: Domain Names</a></li>
-      <li><a href="Midterm/index.html">Midterm: Destination Website</a></li>
-    </ul>
-  </div>
+    <section class="content">
+      <h2>Quick facts</h2>
+      <div class="grid flex space-between wrap">
+        <div class="card"><h3>Area</h3><p>About 1,128 km²—lively islands and much coastline to explore.</p></div>
+        <div class="card"><h3>Cuisine</h3><p>Creole flavors, seafood specialities, French-influenced pastries.</p></div>
+        <div class="card"><h3>Access</h3><p>International flights via Fort-de-France; local ferry and road networks.</p></div>
+      </div>
+    </section>
+  </main>
+
+  
+  <footer class="site-footer">
+    <div class="container flex-between align-center wrap">
+      <div>
+        <strong>VantageAvenir Travel</strong><br>
+        Email: info@vantageavenir.example<br>
+        Phone: +1 (555) 555-5555
+      </div>
+      <div class="copyright">© 2025 VantageAvenir Travel — Martinique Collection</div>
+    </div>
+  </footer>
 </body>
 </html>
+
+
                                                                                                                                                                                                                                                                                                                                   >
 
 
